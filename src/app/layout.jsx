@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "../styles/globals.css";
 
 const geistSans = Geist({
@@ -11,17 +11,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const outfit = Outfit({
+  variable: "--font-Outfit",
+  subsets: ["latin"],
+});
+
 export const metadata = {
   title: "IReadIt lite",
-  description: "Light application for Reddit client, website where links, multimedia content and other resources are shared.",
+  description:
+    "Light application for Reddit client, website where links, multimedia content and other resources are shared.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${outfit.variable} antialiased`}>
         {children}
       </body>
     </html>
