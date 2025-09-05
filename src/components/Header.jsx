@@ -1,8 +1,8 @@
-import { Searchbar } from "@/components/Searchbar";
+import Searchbar from "@/components/Searchbar";
 
 export default function Header() {
   return (
-    <div className="flex fixed items-center gap-2 p-4 border-b-1 border-main w-full">
+    <div className="flex fixed items-center gap-2 p-4 border-b border-main w-full">
       <img
         src="/header-logo.png"
         alt="app logo post it"
@@ -12,6 +12,7 @@ export default function Header() {
         I<span className="text-main">Read</span>It{" "}
         <span className="text-main">lite</span>
       </h1>
+      <Searchbar />
     </div>
   );
 }
