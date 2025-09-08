@@ -2,7 +2,7 @@ import Searchbar from "@/components/Searchbar";
 
 export default function Header() {
   return (
-    <div className="flex fixed items-center gap-2 p-4 border-b border-main w-full">
+    <div className="flex items-center gap-2 p-4 border-b border-main w-full">
       <img
         src="/header-logo.png"
         alt="app logo post it"
