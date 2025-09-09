@@ -1,7 +1,8 @@
 "use client"
+import { use } from 'react';
 
-export default function PostCard({ post }) {
-  const p = post.data;
+export default function PostCard({ posts }) {
+  const p = use(posts);
   
   // check post content
   const isImage = p.preview?.[0]?.source?.url;

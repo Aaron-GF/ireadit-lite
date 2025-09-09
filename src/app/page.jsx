@@ -1,11 +1,13 @@
+import { Suspense } from "react";
+
 import { getInitialPosts } from "@/app/api/reddit";
 
 /* imports components */
 import Header from "@/components/Header";
 import PostCard from "@/components/PostCard";
 
-export default async function Home() {
-  const posts = await getInitialPosts("popular");
+export default function Home() {
+  const posts = getInitialPosts("popular");
 
   return (
     <div>
@@ -13,9 +15,11 @@ export default async function Home() {
         <Header />
       </header>
       <main className="flex flex-col gap-5 items-center py-25">
-        {posts.map((p) => (
-          <PostCard key={p.data.id} post={p} />
-        ))}
+        <Suspense fallback={<p>Loading...</p>}>
+          {posts.map((p) => (
+            <PostCard key={p.data.id} posts={p} />
+          ))}
+        </Suspense>
       </main>
     </div>
   );
