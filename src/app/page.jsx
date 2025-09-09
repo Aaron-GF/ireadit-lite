@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { Suspense } from "react";
 
+=======
+>>>>>>> 41619499c925f2f7cd4a7617ef5f9c451f3cec26
 import { getInitialPosts } from "@/app/api/reddit";
 
 /* imports components */
