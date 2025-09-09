@@ -1,3 +1,5 @@
+"use client"
+
 export default function PostCard({ post }) {
   const p = post.data;
   
