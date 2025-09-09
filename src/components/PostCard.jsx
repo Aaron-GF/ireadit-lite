@@ -1,10 +1,8 @@
 "use client"
-import { use } from 'react';
 
 export default function PostCard({ posts }) {
-  const p = use(posts);
+  const p = posts;
 
-  
   // check post content
   const isImage = p.preview?.[0]?.source?.url;
   const isVideo = p.is_video && p.media?.reddit_video?.fallback_url;
