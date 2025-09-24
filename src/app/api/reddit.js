@@ -1,5 +1,5 @@
 /* call initial posts */
-export async function getInitialPosts(subreddit = "popular") {
+export async function getInitialPosts(subreddit = "javascript") {
   const res = await fetch(
     `https://www.reddit.com/r/${subreddit}.json?raw_json=1`
   );
