@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import PostCard from "@/components/PostCard";
 
 export default async function Home() {
-  const posts = await getInitialPosts("javascript");
+  const posts = await getInitialPosts("popular");
 
   return (
     <div>
