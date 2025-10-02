@@ -14,6 +14,8 @@ export async function getInitialPosts(subreddit = "popular") {
     preview: p.data.preview,
     media: p.data.media,
     is_video: p.data.is_video,
+    score: p.data.score,
+    comments: p.data.num_comments
   }));
 
   console.log(posts);
